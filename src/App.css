@@ -1,38 +1,146 @@
-.App {
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #f4f4f4;
+}
+
+.app {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+h1 {
   text-align: center;
+  margin-bottom: 30px;
+  color: #2c3e50;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+h2 {
+  color: #2c3e50;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.list-header {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  margin-bottom: 15px;
+}
+
+.list {
+  list-style: none;
+}
+
+.list-item {
+  background-color: #fff;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.item-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  border-bottom: 1px solid #eee;
+}
+
+.item-name {
+  font-weight: bold;
+  cursor: pointer;
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+}
+
+.expand-icon {
+  margin-right: 10px;
+  font-size: 12px;
+}
+
+.item-actions {
+  display: flex;
+  gap: 5px;
+}
+
+.sub-list-container {
+  padding: 15px;
+  background-color: #f9f9f9;
+  border-radius: 0 0 5px 5px;
+}
+
+.empty-message {
+  padding: 15px;
+  color: #777;
+  font-style: italic;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+button {
+  padding: 8px 12px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s;
+}
+
+.add-button {
+  background-color: #3498db;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.add-button:hover {
+  background-color: #2980b9;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.edit-button {
+  background-color: #f39c12;
+  color: white;
 }
+
+.edit-button:hover {
+  background-color: #d35400;
+}
+
+.delete-button {
+  background-color: #e74c3c;
+  color: white;
+}
+
+.delete-button:hover {
+  background-color: #c0392b;
+}
+
+.add-sub-button {
+  background-color: #2ecc71;
+  color: white;
+}
+
+.add-sub-button:hover {
+  background-color: #27ae60;
+}
+
+/* Nested levels styling */
+.country-list {
+  margin-bottom: 30px;
+}
+
+.state-list {
+  margin-left: 10px;
+}
+
+.city-list {
+  margin-left: 10px;
+}
+
